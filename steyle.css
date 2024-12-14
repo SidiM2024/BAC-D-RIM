@@ -1170,4 +1170,89 @@ footer {
     color: #f1f1f1; /* لون الرابط عند المرور عليه */
     text-decoration: underline;
   }
+/* إضافة نمط أيقونات Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+#welcome-section {
+  background: linear-gradient(135deg, #4CAF50, #2C6B2F);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#welcome-section .container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.welcome-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+}
+
+.welcome-content h2 span {
+  color: #ffdb58;
+}
+
+.welcome-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.welcome-content p i {
+  color: #ffdb58;
+  margin-right: 10px;
+}
+
+.welcome-content a {
+  display: inline-block;
+  padding: 12px 40px;
+  font-size: 18px;
+  background-color: #ff4500;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.welcome-content a:hover {
+  background-color: #ff6347;
+}
+
+.welcome-content i {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .welcome-content h2 {
+    font-size: 32px;
+  }
+
+  .welcome-content p {
+    font-size: 18px;
+  }
+
+  .welcome-content a {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  .welcome-content i {
+    font-size: 25px;
+  }
+}
+
    
