@@ -1,0 +1,1173 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تهيئة الخطوط */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* الهيدر */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #4CAF50;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* زر الهامبرغر */
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    align-items: center;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* تصميم القائمة الجانبية */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+/* تصميم روابط القائمة */
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* تنسيق الأيقونات */
+.sidebar ul li a i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* التأثير عند المرور على الروابط */
+.sidebar ul li a:hover {
+    background-color: #4CAF50;
+    padding-left: 10px;
+}
+
+/* قائمة الهامبرغر المتحول */
+.hamburger-menu.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.hamburger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+/* ميديا ريسبونس للهواتف */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+}
+
+/* تصميم القسم */
+/* تصميم القسم */
+.study-plan-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* عنوان القسم */
+.study-plan-section .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007BFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: titleAnimation 1s ease-out;
+}
+
+/* خطوات الخطة الدراسية */
+.study-plan-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* كل خطوة */
+.study-plan-step {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.study-plan-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+}
+
+/* الأيقونات */
+.study-plan-step .icon {
+    font-size: 30px; /* تصغير حجم الأيقونة */
+    color: #007BFF;
+    margin-right: 15px; /* تقليص المسافة بين الأيقونة والنص */
+    transition: color 0.3s ease;
+}
+
+/* تأثير الأيقونة عند التمرير */
+.study-plan-step:hover .icon {
+    color: #28a745;
+}
+
+/* محتوى الخطوة */
+.study-plan-step .content {
+    flex-grow: 1;
+}
+
+.study-plan-step h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px; /* تقليص المسافة بين العنوان والنص */
+}
+
+.study-plan-step p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* أنيميشن للظهور */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثير الأنيميشن على العنوان */
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تصميم مخصص لشاشات صغيرة */
+@media (max-width: 768px) {
+    .study-plan-steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .study-plan-step {
+        padding: 12px;
+    }
+
+    .study-plan-step .icon {
+        font-size: 25px; /* تصغير الأيقونة أكثر على الشاشات الصغيرة */
+        margin-right: 12px; /* تقليص المسافة بين الأيقونة والنص */
+    }
+
+    .study-plan-section {
+        padding: 30px 15px;
+    }
+
+    .study-plan-step h3 {
+        font-size: 16px;
+    }
+
+    .study-plan-step p {
+        font-size: 14px;
+    }
+}
+
+
+/* تصميم القسم */
+.grade-calculator-section {
+    background-color: #f4f6f9;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* عنوان القسم */
+.grade-calculator-section .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007BFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* تصميم المدخلات */
+.grade-calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* عناصر الإدخال */
+.grade-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grade-item label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.grade-item .grade-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 100px;
+    text-align: center;
+}
+
+.grade-item .grade-input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* زر الحساب */
+.calculate-button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: #0056b3;
+}
+
+/* عرض النتيجة */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.result span {
+    font-weight: 700;
+    color: #28a745;
+}
+
+/* أنيميشن */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تصميم مخصص لشاشات صغيرة */
+@media (max-width: 768px) {
+    .grade-calculator {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-item .grade-input {
+        width: 80%;
+    }
+}
+
+/* تصميم القسم */
+.countdown-section {
+    background-color: #f1f8ff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* العد التنازلي */
+.countdown-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f7fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out;
+}
+
+/* أنميشن للظهور */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    text-align: center;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease-out;
+}
+
+.time-unit i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.time-unit span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.time-unit p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* أنميشن لدخول العناصر */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* تحسين التوافق مع الأجهزة الصغيرة */
+@media only screen and (max-width: 768px) {
+    .countdown-container {
+        padding: 15px;
+    }
+
+    .countdown-timer {
+        flex-direction: column;
+    }
+
+    .time-unit {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 1.5em;
+    }
+
+    .time-unit i {
+        font-size: 2em;
+    }
+
+    .time-unit span {
+        font-size: 1.8em;
+    }
+
+    .time-unit p {
+        font-size: 1.1em;
+    }
+}
+
+/* تصميم قسم الكتب */
+.books-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.books-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.books-section p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.books-section .btn-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.books-section .btn-link:hover {
+    background-color: #2980b9;
+}
+
+.books-section .btn-link i {
+    margin-right: 10px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.category {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1.2s ease-out;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.category p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* أنميشن */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* تحسين التوافق مع الأجهزة الصغيرة */
+@media only screen and (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .books-section h2 {
+        font-size: 2rem;
+    }
+
+    .books-section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* تصميم قسم الفيديوهات */
+.videos-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.videos-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.videos-section p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.video-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1.2s ease-out;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-item i {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.video-item h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.video-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.video-item .btn-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.video-item .btn-link:hover {
+    background-color: #2980b9;
+}
+
+/* أنميشن */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* تحسين التوافق مع الأجهزة الصغيرة */
+@media only screen and (max-width: 768px) {
+    .video-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .video-item {
+        width: 100%;
+    }
+
+    .videos-section h2 {
+        font-size: 2rem;
+    }
+
+    .videos-section p {
+        font-size: 1rem;
+    }
+}
+
+
+/* إضافة الخطوط والأيقونات */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.study-methods {
+  padding: 20px;
+  background-color: #f4f7f6;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.study-methods h2 {
+  font-size: 26px;
+  color: #2d3436;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.study-methods p {
+  font-size: 18px;
+  color: #636e72;
+  margin-bottom: 20px;
+}
+
+.study-methods ul {
+  text-align: right;
+  margin: 0 auto 20px;
+  padding: 0;
+  list-style: none;
+  max-width: 600px;
+}
+
+.study-methods ul li {
+  font-size: 16px;
+  color: #34495e;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.study-methods ul li i {
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pomodoro-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.pomodoro-link:hover {
+  background-color: #16a085;
+}
+
+.pomodoro-link i {
+  margin-right: 10px;
+}
+
+/* التأثيرات */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* تجنب تداخل النصوص مع الأجهزة الصغيرة */
+@media only screen and (max-width: 768px) {
+  .study-methods {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .study-methods h2 {
+    font-size: 22px;
+  }
+
+  .study-methods p {
+    font-size: 16px;
+  }
+
+  .study-methods ul li {
+    font-size: 14px;
+  }
+
+  .pomodoro-link {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* تصميم القسم */
+.study-schedule-section {
+    margin: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.study-schedule-section h2 {
+    color: #4CAF50;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.study-schedule-section p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.schedule-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* تصميم الجدول */
+#study-schedule {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#study-schedule th, #study-schedule td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#study-schedule th {
+    background-color: #007bff;
+    color: white;
+}
+
+#study-schedule td {
+    background-color: #f9f9f9;
+}
+
+#study-schedule tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+#study-schedule tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* تأثير الحركات عند الضغط */
+button, .join-chat-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .join-chat-btn:hover {
+    background-color: #45a049;
+}
+
+#add-task-btn {
+    background-color: #007bff;
+}
+
+#add-task-btn:hover {
+    background-color: #0069d9;
+}
+
+.join-chat-btn {
+    background-color: #ff5722;
+}
+
+.join-chat-btn:hover {
+    background-color: #e64a19;
+}
+
+button i, .join-chat-btn i {
+    margin-right: 10px;
+}
+
+/* تحسين التوافق مع الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .study-schedule-section {
+        padding: 20px;
+    }
+
+    #study-schedule {
+        font-size: 14px;
+    }
+
+    button, .join-chat-btn {
+        font-size: 16px;
+    }
+}
+
+/* تأثيرات أنيميشن */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تصميم القسم بشكل جذاب */
+.registration-section {
+    padding: 60px 20px;
+    background-color: #f4f7fb;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .step {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .step i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .step h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* تصميم الرابط بألوان جذابة */
+  .cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* تصميم متجاوب مع الأجهزة المختلفة */
+  @media screen and (max-width: 768px) {
+    .steps {
+      grid-template-columns: 1fr;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .step i {
+      font-size: 30px;
+    }
+  
+    .step h3 {
+      font-size: 1.2rem;
+    }
+  
+    .step p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* تصميم القسم */
+.tips-section {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* تصميم الحقول النصية */
+  .video-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .tip {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .tip h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .video-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .video-link:hover {
+    background-color: #0056b3;
+  }
+  
+  /* تصميم متجاوب مع الأجهزة المختلفة */
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .video-link {
+      font-size: 1rem;
+    }
+  }
+
+ /* تصميم الـ Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  footer a {
+    color: #4CAF50; /* لون الرابط */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    color: #f1f1f1; /* لون الرابط عند المرور عليه */
+    text-decoration: underline;
+  }
+   
