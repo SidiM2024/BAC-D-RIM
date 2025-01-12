@@ -1378,4 +1378,125 @@ circle:last-child {
   color: #333;
 }
 
+/* تصميم القسم الترحيبي */
+.intro-section {
+    background-color: #edf1f7;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.intro-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-header {
+    margin-bottom: 25px;
+    color: #1e90ff;
+}
+
+.intro-header i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: rotateIcon 2s infinite;
+}
+
+.intro-header h2 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.intro-body p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.intro-body p strong {
+    color: #ff6347;
+    font-size: 22px;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: #388e3c;
+    transform: translateY(-5px);
+}
+
+.btn-start i {
+    margin-left: 10px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* التأكد من تجاوب التصميم مع جميع الأجهزة */
+@media (max-width: 768px) {
+    .intro-card {
+        padding: 20px;
+    }
+
+    .intro-header i {
+        font-size: 40px;
+    }
+
+    .intro-header h2 {
+        font-size: 28px;
+    }
+
+    .intro-body p {
+        font-size: 16px;
+    }
+
+    .btn-start {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
    
