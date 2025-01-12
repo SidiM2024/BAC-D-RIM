@@ -246,46 +246,50 @@
 
     
 
-   <div id="grade-calculator" class="grade-calculator">
-    <h2>حاسبة المعدل</h2>
-    <div class="form-group">
-        <label for="science">العلوم:</label>
-        <input type="number" id="science" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="physics">الفيزياء والكيمياء:</label>
-        <input type="number" id="physics" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="math">الرياضيات:</label>
-        <input type="number" id="math" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="arabic">اللغة العربية:</label>
-        <input type="number" id="arabic" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="french">اللغة الفرنسية:</label>
-        <input type="number" id="french" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="islamic">التربية الإسلامية:</label>
-        <input type="number" id="islamic" class="input-field">
-    </div>
-    <div class="form-group">
-        <label for="english">اللغة الإنجليزية:</label>
-        <input type="number" id="english" class="input-field">
-    </div>
-    
-    <button onclick="calculateGrade()" class="submit-button">حساب المعدل</button>
-    
-    <div id="result" class="result-container" style="display:none;">
-        <div class="result-message">
-            <p id="grade-message"></p>
-            <button onclick="closeResult()" class="close-button">إغلاق</button>
+<section id="grade-calculator-section" class="grade-calculator-section">
+    <div id="grade-calculator" class="grade-calculator">
+        <h2 class="section-title">حاسبة المعدل</h2>
+        <p class="section-description">أدخل درجات المواد للحصول على المعدل النهائي الخاص بك.</p>
+
+        <div class="form-group">
+            <label for="science">العلوم:</label>
+            <input type="number" id="science" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="physics">الفيزياء والكيمياء:</label>
+            <input type="number" id="physics" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="math">الرياضيات:</label>
+            <input type="number" id="math" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="arabic">اللغة العربية:</label>
+            <input type="number" id="arabic" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="french">اللغة الفرنسية:</label>
+            <input type="number" id="french" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="islamic">التربية الإسلامية:</label>
+            <input type="number" id="islamic" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+        <div class="form-group">
+            <label for="english">اللغة الإنجليزية:</label>
+            <input type="number" id="english" class="input-field" placeholder="أدخل الدرجة">
+        </div>
+
+        <button onclick="calculateGrade()" class="submit-button">حساب المعدل</button>
+
+        <div id="result" class="result-container" style="display:none;">
+            <div class="result-message">
+                <p id="grade-message"></p>
+                <button onclick="closeResult()" class="close-button">إغلاق</button>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
     
 
