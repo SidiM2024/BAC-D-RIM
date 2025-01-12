@@ -1499,4 +1499,96 @@ circle:last-child {
         font-size: 16px;
     }
 }
-   
+ .study-plan-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: #fff;
+    text-align: center;
+}
+
+.study-plan-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.study-plan-section .header h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.study-plan-section .header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.study-plan-section .goal-section,
+.study-plan-section .daily-plan,
+.study-plan-section .weekly-plan {
+    margin-bottom: 40px;
+}
+
+.study-plan-section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.study-plan-section ul {
+    text-align: left;
+    margin: 20px 0;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.study-plan-section ul li {
+    margin-bottom: 10px;
+}
+
+.study-plan-section .study-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto 0;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.study-plan-section .study-table th,
+.study-plan-section .study-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.study-plan-section .study-table thead {
+    background: #185a9d;
+    color: #fff;
+}
+
+.study-plan-section .study-table tbody tr:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .study-plan-section .header h2 {
+        font-size: 28px;
+    }
+
+    .study-plan-section .header p {
+        font-size: 16px;
+    }
+
+    .study-plan-section h3 {
+        font-size: 24px;
+    }
+
+    .study-plan-section .study-table th,
+    .study-plan-section .study-table td {
+        font-size: 14px;
+    }
+}
+  
