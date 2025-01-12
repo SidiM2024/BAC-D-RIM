@@ -14,32 +14,35 @@ document.getElementById('sidebar-toggle').addEventListener('click', function() {
 });
 
 function calculateGrade() {
-    // جمع الدرجات مع الأوزان
-    var sn = parseFloat(document.getElementById("sn").value) || 0;
-    var pc = parseFloat(document.getElementById("pc").value) || 0;
-    var m = parseFloat(document.getElementById("m").value) || 0;
-    var ar = parseFloat(document.getElementById("ar").value) || 0;
-    var fr = parseFloat(document.getElementById("fr").value) || 0;
-    var ir = parseFloat(document.getElementById("ir").value) || 0;
-    var an = parseFloat(document.getElementById("an").value) || 0;
+    let science = parseFloat(document.getElementById('science').value) || 0;
+    let physics = parseFloat(document.getElementById('physics').value) || 0;
+    let math = parseFloat(document.getElementById('math').value) || 0;
+    let arabic = parseFloat(document.getElementById('arabic').value) || 0;
+    let french = parseFloat(document.getElementById('french').value) || 0;
+    let islamic = parseFloat(document.getElementById('islamic').value) || 0;
+    let english = parseFloat(document.getElementById('english').value) || 0;
+    
+    let totalScore = (science * 8) + (physics * 7) + (math * 6) + (arabic * 3) + (french * 3) + (islamic * 2) + (english * 2);
+    let totalWeight = 8 + 7 + 6 + 3 + 3 + 2 + 2;
+    let average = totalScore / totalWeight;
 
-    // الأوزان
-    var snWeight = 8;
-    var pcWeight = 7;
-    var mWeight = 6;
-    var arWeight = 3;
-    var frWeight = 3;
-    var irWeight = 2;
-    var anWeight = 2;
+    let gradeMessage = "";
+    if (average >= 12) {
+        gradeMessage = "مبروك! أنت على الطريق الصحيح. استمر في التفوق!";
+    } else if (average >= 10) {
+        gradeMessage = "أحسنت! ولكن تحتاج إلى المزيد من الاجتهاد لتحقق أفضل النتائج.";
+    } else if (average >= 8) {
+        gradeMessage = "تحتاج إلى بذل المزيد من الجهد لتحقيق نتائج أفضل.";
+    } else {
+        gradeMessage = "عليك ببذل جهد أكبر لتحقيق نتائج أفضل. لا تيأس!";
+    }
 
-    // حساب المعدل
-    var totalWeight = snWeight + pcWeight + mWeight + arWeight + frWeight + irWeight + anWeight;
-    var totalPoints = (sn * snWeight) + (pc * pcWeight) + (m * mWeight) + (ar * arWeight) + (fr * frWeight) + (ir * irWeight) + (an * anWeight);
+    document.getElementById('grade-message').innerText = `معدلك هو: ${average.toFixed(2)}\n${gradeMessage}`;
+    document.getElementById('result').style.display = 'flex';
+}
 
-    var average = totalPoints / totalWeight;
-
-    // عرض النتيجة
-    document.getElementById("average").innerText = average.toFixed(2);
+function closeResult() {
+    document.getElementById('result').style.display = 'none';
 }
 
 const countdown = () => {
