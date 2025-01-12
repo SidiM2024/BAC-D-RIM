@@ -77,30 +77,7 @@ const countdown = () => {
 setInterval(countdown, 1000);
 
 
-document.getElementById('add-task-btn').addEventListener('click', function() {
-    // إنشاء صف جديد لإضافة مهمة
-    let newRow = document.createElement('tr');
 
-    newRow.innerHTML = `
-        <td><input type="text" placeholder="اليوم" /></td>
-        <td><input type="text" placeholder="المادة" /></td>
-        <td><input type="text" placeholder="الوقت" /></td>
-        <td><input type="text" placeholder="الأستاذ" /></td>
-        <td><input type="text" placeholder="الملاحظات" /></td>
-        <td><input type="date" placeholder="التاريخ" /></td>
-        <td><input type="text" placeholder="الموقع" /></td>
-        <td><input type="text" placeholder="المدة" /></td>
-        <td><button class="delete-btn"><i class="fa fa-trash"></i> حذف</button></td>
-    `;
-    
-    // إضافة الصف الجديد إلى الجدول
-    document.querySelector('#study-schedule tbody').appendChild(newRow);
-
-    // إضافة حدث لحذف الصف عند الضغط على زر الحذف
-    newRow.querySelector('.delete-btn').addEventListener('click', function() {
-        newRow.remove();
-    });
-});
 document.addEventListener('DOMContentLoaded', function () {
   const faqItems = document.querySelectorAll('.faq-item');
 
