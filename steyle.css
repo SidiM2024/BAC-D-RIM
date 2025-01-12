@@ -243,146 +243,112 @@ header {
 }
 
 /* تصميم خاص بحاسبة المعدل فقط */
+.grade-calculator-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    color: #fff;
+    text-align: center;
+}
+
 .grade-calculator {
-    font-family: Arial, sans-serif;
-    direction: rtl;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    padding: 10px;
-}
-
-.grade-calculator h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.grade-calculator .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.grade-calculator label {
-    font-size: 18px;
-    color: #555;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.grade-calculator .input-field {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center;
-}
-
-.grade-calculator .submit-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 20px;
-}
-
-.grade-calculator .submit-button:hover {
-    background-color: #45a049;
-}
-
-.grade-calculator .result-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.grade-calculator .result-message {
-    background-color: #fff;
-    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
-}
-
-.grade-calculator .result-message p {
-    font-size: 20px;
+    padding: 20px;
     color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.grade-calculator .close-button {
-    background-color: #f44336;
-    color: white;
-    padding: 10px 20px;
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #185a9d;
+}
+
+.section-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #185a9d;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.grade-calculator .close-button:hover {
-    background-color: #e53935;
+.submit-button:hover {
+    background-color: #43cea2;
 }
 
-/* تصميم متجاوب */
+.result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.result-message p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #185a9d;
+}
+
+.close-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #185a9d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-button:hover {
+    background-color: #43cea2;
+}
+
 @media (max-width: 768px) {
-    .grade-calculator h2 {
-        font-size: 22px;
+    .section-title {
+        font-size: 24px;
     }
 
-    .grade-calculator .input-field {
+    .input-field {
         font-size: 14px;
     }
 
-    .grade-calculator .submit-button {
-        font-size: 16px;
-    }
-
-    .grade-calculator .result-message p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .grade-calculator {
-        padding: 20px;
-    }
-
-    .grade-calculator h2 {
-        font-size: 20px;
-    }
-
-    .grade-calculator .input-field {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .grade-calculator .submit-button {
-        font-size: 14px;
-    }
-
-    .grade-calculator .result-message p {
+    .submit-button, .close-button {
         font-size: 16px;
     }
 }
