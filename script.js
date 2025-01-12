@@ -42,36 +42,40 @@ function calculateGrade() {
     document.getElementById("average").innerText = average.toFixed(2);
 }
 
-// تحديد تاريخ البكالوريا
-var countdownDate = new Date("July 7, 2025 00:00:00").getTime();
+const countdown = () => {
+  const targetDate = new Date("2025-07-07T00:00:00").getTime();
+  const now = new Date().getTime();
+  const timeDifference = targetDate - now;
 
-// تحديث العد التنازلي كل ثانية
-var x = setInterval(function() {
+  if (timeDifference >= 0) {
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    // الحصول على التاريخ الحالي
-    var now = new Date().getTime();
+    // Update text
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
 
-    // حساب الفرق بين التاريخين
-    var distance = countdownDate - now;
+    // Update circles
+    const totalDays = 365; // Adjust for leap year if needed
+    const totalHours = 24;
+    const totalMinutes = 60;
+    const totalSeconds = 60;
 
-    // حساب الأيام، الساعات، الدقائق، والثواني
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days-circle").style.strokeDashoffset = 283 - (283 * days) / totalDays;
+    document.getElementById("hours-circle").style.strokeDashoffset = 283 - (283 * hours) / totalHours;
+    document.getElementById("minutes-circle").style.strokeDashoffset = 283 - (283 * minutes) / totalMinutes;
+    document.getElementById("seconds-circle").style.strokeDashoffset = 283 - (283 * seconds) / totalSeconds;
+  } else {
+    document.querySelector(".countdown-container").innerHTML = "<h2>انتهى العد التنازلي!</h2>";
+  }
+};
 
-    // عرض النتيجة في العنصر المعني
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+setInterval(countdown, 1000);
 
-    // إذا انتهى الوقت، عرض رسالة
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "لقد حان موعد الباكالوريا!";
-    }
-}, 1000);
 
 document.getElementById('add-task-btn').addEventListener('click', function() {
     // إنشاء صف جديد لإضافة مهمة
