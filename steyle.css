@@ -1557,4 +1557,95 @@ circle:last-child {
         font-size: 14px;
     }
 }
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.contact-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+}
+
+.card {
+    background: #fff;
+    color: #333;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+    font-size: 70px;
+    color: #6a11cb;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2575fc;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #fff;
+    background: #2575fc;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #6a11cb;
+    transform: scale(1.05);
+}
+
+.contact-button i {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px 15px;
+    }
+
+    .icon {
+        font-size: 50px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .contact-button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
   
