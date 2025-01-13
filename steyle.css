@@ -1648,4 +1648,69 @@ circle:last-child {
         padding: 8px 15px;
     }
 }
-  
+
+/* قسم طرح الأسئلة */
+.ask-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+.ask-section .ask-content {
+    padding: 20px;
+}
+
+.ask-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.ask-section p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #f9f9f9;
+}
+
+.ask-section strong {
+    color: #fff700;
+    font-weight: bold;
+}
+
+.ask-section .ask-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff758c;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.ask-section .ask-button i {
+    margin-right: 8px;
+}
+
+.ask-section .ask-button:hover {
+    background: #fff700;
+    color: #ff758c;
+    transform: translateY(-5px);
+}
+
